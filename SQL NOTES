@@ -16,3 +16,40 @@ INNER JOIN table2
 ON table1.common_column = table2.common_column;
 
 
+
+SELECT 
+    IF(ev.Rating < 6, NULL, e.Name) AS Names , 
+     ev.Rating as Rating 
+FROM 
+    EMPLOYEE e
+INNER JOIN 
+    EVALUATION ev 
+ON 
+    e.Points BETWEEN ev.Lower AND ev.Upper
+ORDER BY 
+    Rating DESC, 
+    e.Name ASC;
+
+/* YOUR QUERY GOES HERE
+   Example: SELECT * FROM EMPLOYEE; 
+*/
+select  count(e.Name) AS `COUNT(Name)`
+FROM 
+    EMPLOYEE e
+INNER JOIN 
+    EVALUATION ev 
+ON 
+    e.Points BETWEEN ev.Lower AND ev.Upper
+where ev.Rating <3;
+
+
+select  count(e.Name) AS `COUNT(Name)`
+FROM 
+    EMPLOYEE e
+INNER JOIN 
+    EVALUATION ev 
+ON 
+    e.Points BETWEEN ev.Lower AND ev.Upper
+where ev.Rating > 8;
+
+
