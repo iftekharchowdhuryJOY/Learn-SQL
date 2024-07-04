@@ -53,3 +53,12 @@ ON
 where ev.Rating > 8;
 
 
+Backticks
+When to Use Backticks
+1. Reserved Keywords: If you want to use a reserved keyword as a column or table name.
+2. Special Characters: If the identifier contains special characters (e.g., spaces, hyphens).
+3. Case Sensitivity
+Counting Names with a Specific Alias - SELECT COUNT(Name) AS `Count(Name)` FROM EMPLOYEE;
+
+
+
