@@ -1,0 +1,18 @@
+##INNER JOIN
+
+select sum(A.count) AS A from ENGINEER  AS A
+inner join DATA d
+on A.ID = d.ID  and d.Type = 'FrontEnd'
+
+INNER JOIN - at least one match in both tables.
+
+Columns Aliases - temporary column name
+Do not forget to use on clause 
+
+Here is example: 
+SELECT columns
+FROM table1
+INNER JOIN table2
+ON table1.common_column = table2.common_column;
+
+
