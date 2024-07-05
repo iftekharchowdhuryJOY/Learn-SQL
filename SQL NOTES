@@ -60,5 +60,16 @@ When to Use Backticks
 3. Case Sensitivity
 Counting Names with a Specific Alias - SELECT COUNT(Name) AS `Count(Name)` FROM EMPLOYEE;
 
+SELECT   l1.Name as Labourer1, l2.Name as Labourer2, l1.Country as Country
+FROM     LABOURERS l1, LABOURERS l2
+WHERE    l1.Country = l2.Country and l1.Name <> l2.Name
+ORDER BY 1, 2, 3
+
+select * from labour l1, labour l2 - i can make two aliases from one table. 
+
+l1.Name <> l2.Name - ensures that a laborer is not paired with themselves.
+
+The <> sign in SQL is a comparison operator that means "not equal to." It is used in WHERE clauses and 
+other conditional expressions to filter rows based on inequality. In many SQL dialects, you can also use != to represent "not equal to.
 
 
