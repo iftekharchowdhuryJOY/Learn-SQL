@@ -72,4 +72,21 @@ l1.Name <> l2.Name - ensures that a laborer is not paired with themselves.
 The <> sign in SQL is a comparison operator that means "not equal to." It is used in WHERE clauses and 
 other conditional expressions to filter rows based on inequality. In many SQL dialects, you can also use != to represent "not equal to.
 
+SELECT *
+FROM EMPLOYEES
+WHERE Country <> 'USA';
 
+SELECT 
+ABS(
+    (SELECT MAX(salary) FROM db_employee WHERE department_id = 1) - 
+    (SELECT MAX(salary) FROM db_employee WHERE department_id = 4)) AS salary_difference;
+
+
+To find out the highest values from the table use max()
+if you want a non negative values from the output then use abs(). 
+
+SELECT 
+    ProductID, 
+    ABS(Price - Cost) AS ProfitMargin
+FROM 
+    Products;
