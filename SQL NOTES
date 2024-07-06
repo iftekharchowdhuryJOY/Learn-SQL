@@ -114,3 +114,59 @@ JOIN (
 ORDER BY 
     e.id ASC;
 
+when you are trying to combine rows from the table use JOIN.
+
+
+SQL SUB-Queries
+
+Sub-queries are inner queries. 
+
+1. Single-row subqueries. 
+2. Multiple-row subqueries.
+3. Multiple-Column subqueries.
+4. Correlated subqueries. 
+
+1. Single-row subqueries
+
+SELECT first_name, last_name, salary
+FROM employees
+WHERE salary > (SELECT AVG(salary) FROM employees);
+
+2. Multiple-row subqueries
+Multiple-row subqueries return multiple rows and are typically used with operators like IN, ANY, ALL
+
+SELECT first_name, last_name, department_id
+FROM employees
+WHERE department_id IN (SELECT department_id FROM departments WHERE location_id = 1700);
+
+3. Multiple-Column subqueries
+
+SELECT first_name, last_name, job_id, department_id
+FROM employees
+WHERE (job_id, department_id) IN (SELECT job_id, department_id FROM employees WHERE salary > 10000);
+
+4. Correlated subqueries
+
+Correlated subqueries reference columns from the outer query and are evaluated once for each row processed by the outer query.
+SELECT first_name, last_name, salary, department_id
+FROM employees e1
+WHERE salary > (SELECT AVG(salary) FROM employees e2 WHERE e1.department_id = e2.department_id);
+
+Using Subqueries in SELECT Clause
+SELECT e.first_name, e.last_name, (SELECT d.department_name FROM departments d WHERE d.department_id = e.department_id) AS department_name
+FROM employees e;
+
+select * from STUDY where marks > 80;
+
+update STUDY 
+set marks = 50
+where marks > 25 and marks <= 50;
+
+select * from STUDY;
+
+
+
+
+
+
+
