@@ -164,6 +164,17 @@ where marks > 25 and marks <= 50;
 
 select * from STUDY;
 
+DELETE FROM table_name
+WHERE condition;
+Deleting specific rows: Use the WHERE clause to specify the condition for which rows to delete.
+
+delete from STUDY 
+where age >=19 and age <=22;
+
+SELECT * from STUDY;
+
+
+
 
 
 
