@@ -199,6 +199,12 @@ FROM SALES
 GROUP BY customer_id;
 
 
+Tips to remember Group By
+1. Any column in the SELECT list that is not an aggregate function must be in the GROUP BY clause.
+2. Aggregate functions: Use aggregate functions to get meaningful summaries like totals, averages, counts, etc.
+3. Combining GROUP BY and ORDER BY: You can group your data and then sort it to make your results more readable and meaningful.
+
+It's often used in conjunction with aggregate functions like COUNT(), SUM(), AVG(), MAX(), and MIN().
 
 
 
