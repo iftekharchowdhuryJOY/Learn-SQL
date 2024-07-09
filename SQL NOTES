@@ -216,4 +216,7 @@ MAX(): Finds the maximum value in a column.
 MIN(): Finds the minimum value in a column.
 
 select avg(PeopleSaved) from FIREFIGHTERS where CountryCode = 'PM'
+when finding the difference: select (max(PeopleSaved) - min(PeopleSaved)) as A from FIREFIGHTERS;
+use max and min
+
 
