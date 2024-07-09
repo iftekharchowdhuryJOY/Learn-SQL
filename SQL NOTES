@@ -208,6 +208,12 @@ It's often used in conjunction with aggregate functions like COUNT(), SUM(), AVG
 
 
 
+Common Aggregate Functions
+COUNT(): Counts the number of rows in a set.
+SUM(): Calculates the total sum of a numeric column.
+AVG(): Calculates the average value of a numeric column.
+MAX(): Finds the maximum value in a column.
+MIN(): Finds the minimum value in a column.
 
-
+select avg(PeopleSaved) from FIREFIGHTERS where CountryCode = 'PM'
 
