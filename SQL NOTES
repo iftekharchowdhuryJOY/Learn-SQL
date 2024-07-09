@@ -173,6 +173,30 @@ where age >=19 and age <=22;
 
 SELECT * from STUDY;
 
+Distinct - it ensures each row value is unique and removes the duplicated from the data.
+
+SELECT DISTINCT column1, column2, ...
+FROM table_name;
+
+SELECT DISTINCT department_id
+FROM EMPLOYEES;
+
+SELECT DISTINCT department_id, salary
+FROM EMPLOYEES;
+
+
+select sum(distinct salary) as Salary from Jobs j 
+inner join 
+Students s on s.Id = j.Id 
+inner join Departments d on d.DepartmentId = s.DepartmentId
+
+where  d.DepartmentName = 'CSE'
+order by d.DepartmentName ASC;
+
+
+SELECT customer_id, SUM(DISTINCT amount) AS total_distinct_amount
+FROM SALES
+GROUP BY customer_id;
 
 
 
