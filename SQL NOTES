@@ -217,6 +217,8 @@ MIN(): Finds the minimum value in a column.
 
 select avg(PeopleSaved) from FIREFIGHTERS where CountryCode = 'PM'
 when finding the difference: select (max(PeopleSaved) - min(PeopleSaved)) as A from FIREFIGHTERS;
-use max and min
+
+select sqrt(pow(max(XCoordinate) - MIN(XCoordinate),2) + pow(max(YCoordinate)- MIN(YCoordinate),2)) as A
+from HOUSES;
 
 
