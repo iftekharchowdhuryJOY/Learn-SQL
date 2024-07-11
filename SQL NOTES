@@ -227,4 +227,8 @@ select count(*) as A from WORKERS where DailyWage * DaysWorked = (
     from WORKERS
 );
 
+In SQL, OFFSET is used in conjunction with LIMIT to specify how many rows to skip from the beginning of the result set before returning rows. 
 
+When to Use OFFSET:
+Top-N Queries: When you need to retrieve a specific subset of rows, such as "find the top 10 highest earners" or "get the top 5 highest marks".
+SELECT MARKS from STUDENTS order by MARKS DESC LIMIT 1 OFFSET 4;
