@@ -232,3 +232,13 @@ In SQL, OFFSET is used in conjunction with LIMIT to specify how many rows to ski
 When to Use OFFSET:
 Top-N Queries: When you need to retrieve a specific subset of rows, such as "find the top 10 highest earners" or "get the top 5 highest marks".
 SELECT MARKS from STUDENTS order by MARKS DESC LIMIT 1 OFFSET 4;
+
+SELECT b.Id AS Id
+FROM Books b
+INNER JOIN (
+    SELECT BooksId, COUNT(DISTINCT Id) AS CustomerCount
+    FROM BoughtBooks
+    GROUP BY BooksId
+    HAVING COUNT(DISTINCT Id) >= 3
+) bb ON b.Id = bb.BooksId;
+
